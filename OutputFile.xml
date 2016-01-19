@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OutputFile>
+	<TaskSet id="1">
+		&lt;Task&gt;
+			&lt;ID&gt;1&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+		&lt;Task&gt;
+			&lt;ID&gt;2&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+	</TaskSet>
+	<TaskSet id="2">
+		&lt;Task&gt;
+			&lt;ID&gt;1&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+		&lt;Task&gt;
+			&lt;ID&gt;2&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+	</TaskSet>
+	<TaskSet id="3">
+		&lt;Task&gt;
+			&lt;ID&gt;1&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+		&lt;Task&gt;
+			&lt;ID&gt;2&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+	</TaskSet>
+	<TaskSet id="4">
+		&lt;Task&gt;
+			&lt;ID&gt;1&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+		&lt;Task&gt;
+			&lt;ID&gt;2&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+	</TaskSet>
+	<TaskSet id="5">
+		&lt;Task&gt;
+			&lt;ID&gt;1&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+		&lt;Task&gt;
+			&lt;ID&gt;2&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+	</TaskSet>
+	<TaskSet id="6">
+		&lt;Task&gt;
+			&lt;ID&gt;1&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+		&lt;Task&gt;
+			&lt;ID&gt;2&lt;/ID&gt;
+			&lt;period&gt;0&lt;/period&gt;
+			&lt;WCET&gt;0&lt;/WCET&gt;
+		&lt;/Task&gt;
+	</TaskSet>
+</OutputFile>

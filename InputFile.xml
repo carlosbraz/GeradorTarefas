@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<InputFile>
+	<TaskSet>
+		<Task>
+			<MaxAmount>2</MaxAmount>
+			<MinAmount>1</MinAmount>
+		</Task>	
+		<Amount>6</Amount>
+		<Utilization>
+			<Min>15</Min>  
+			<Max>40</Max>  
+		</Utilization>
+	</TaskSet>
+</InputFile>
