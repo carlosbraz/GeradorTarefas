@@ -18,7 +18,7 @@ public class TaskGeneratorAlgBasic implements TaskGeneratorAlg{
     private ParamTaskGeneratorAlgBasic paramTask = null;
     private ArrayList<TaskAlg> tasks;
     private TaskAlgBasic task;
-    private TaskSet taskSet;
+    private TaskSet taskSet = null;
     
     @Override
     public void gerarTaskSet() {

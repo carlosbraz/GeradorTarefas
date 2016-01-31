@@ -28,7 +28,7 @@ import org.jdom.output.XMLOutputter;
  * @author T
  */
 public abstract class AbstractOutputFile {
-    private ArrayList<ArrayList<TaskAlg>> listOutput;
+    private ArrayList<ArrayList<TaskAlg>> listOutput = null;
     private Document outputXML = new Document();
     private Element outputXML1 = new Element("OutputFile");
     private XStream stream = new XStream(new DomDriver());
@@ -41,13 +41,13 @@ public abstract class AbstractOutputFile {
         for (Iterator<ArrayList<TaskAlg>> iterator = listOutput.iterator(); iterator.hasNext();) {
             ArrayList<TaskAlg> next = iterator.next();
             this.aux = new Element("TaskSet");
-            String aux3 = "";
+            StringBuffer aux3 = new StringBuffer();
             for (int j = 0; j < next.size(); j++) {
-                aux3 += this.stream.toXML(next.get(j));
+                aux3.append(this.stream.toXML(next.get(j)));
             }
-            String aux2 = this.stream.toXML(next);
+            String aux2 = aux3.toString();
             this.aux.setAttribute("id",Integer.toString(i));
-            this.aux.setText(aux3);
+            this.aux.setText(aux2);
             this.outputXML1.addContent(this.aux);
             i++;
         }

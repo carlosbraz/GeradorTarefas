@@ -15,7 +15,7 @@ public class Constants {
     public static final int taskGeneratorAlgBasic = 1;
 
     public static int getTaskGeneratorAlg(String nomeTask) {
-        if(nomeTask == "TaskGeneratorAlgBasic"){
+        if(nomeTask.equals("TaskGeneratorAlgBasic")){
             return taskGeneratorAlgBasic;
         }
         

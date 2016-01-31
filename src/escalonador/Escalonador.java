@@ -24,7 +24,7 @@ public class Escalonador {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        ControllerSingleton contr = ControllerSingleton.getInstance();
+        //ControllerSingleton contr = ControllerSingleton.getInstance();
         
         
         
