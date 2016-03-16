@@ -8,7 +8,9 @@ package escalonador;
 
 
 /**
- *
+ * Classe de constantes para identificar os Task Generator
+ * cada um recebe um valor unico para ser utilizado no codigo
+ * 
  * @author T
  */
 public class Constants {

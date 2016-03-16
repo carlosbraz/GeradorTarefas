@@ -19,9 +19,9 @@ public class UserInterface {
     public void recebeParametrosIniciais(){//este metodo iniciara as strings acima
         Scanner teclado = new Scanner(System.in);
         
-        System.out.println("Digite o nome do arquivo de entrada: ");//com a extenssao 
+        System.out.println("Digite o nome do arquivo de entrada: ");//com a extensao 
         this.input = teclado.next();
-        System.out.println("Digite o nome do arquivo de saida: ");//com a extenssao 
+        System.out.println("Digite o nome do arquivo de saida: ");//com a extensao 
         this.output = teclado.next();
         System.out.println("Digite o TaskGenerator que deseja utilizar: ");
         this.taskGenerator = teclado.next();
