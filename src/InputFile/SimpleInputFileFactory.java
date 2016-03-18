@@ -7,20 +7,27 @@ package InputFile;
 
 import escalonador.Constants;
 
-
-
-
 /**
- *
+ * classe utiliza o padrao de projeto Simple Factory para determinar qual
+ * classe que implementa a interface InputFile que deve ser instanciada
+ * 
  * @author T
  */
 public class SimpleInputFileFactory {
-    public InputFileAlg createInputFile(int inputFileName){
+
+    /**
+     * Metodo para instanciar o tipo correto de Input File 
+     * de acordo com o nome que é recebido como entrada
+     * 
+     * @param inputFileName nome do Input file que deve ser instanciado
+     * @return instancia da classe InputFile, que vai depender do parametro de entrada 
+     */
+    public InputFileAlg createInputFile(int inputFileName) {
         InputFileAlg input = null;
-        if(inputFileName == Constants.taskGeneratorAlgBasic){
+        if (inputFileName == Constants.taskGeneratorAlgBasic) {
             input = new InputFileAlgXML();
         }
         return input;
     }
-    
+
 }

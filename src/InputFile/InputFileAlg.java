@@ -40,9 +40,5 @@ public interface InputFileAlg {
      */
     public String taskGeneratorID();
     
-    /**
-     * Testa se o arquivo existe antes de tentar abrir
-     * @return boolean true se o arquivo existe, false se não existe
-     */
-    public boolean textValues();
+    
 }

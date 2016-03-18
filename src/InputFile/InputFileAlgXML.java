@@ -22,16 +22,23 @@ import org.jdom.input.SAXBuilder;
  */
 public class InputFileAlgXML implements InputFileAlg{
     
-    private Element elemento;
+    //elemento que quarda os valores de input antes de serem normalizados
+    private Element elemento; 
+    
+    // Campos do arquivo XML, cada um tem valor especifico para o gerador de tarefas
     private Element task;
     private Element taskSet;
     private Element utilization;
+    
+    //Strings com os valores de input do arquivo XML normalizados
     private String maxAmountTask;
     private String minAmountTask;
     private String amount;
     private String utilMax;
     private String utilMin;
-    private File arquivo;
+    
+    //arquivo XML com os inputs pro gerador iniciar
+    private File arquivo; 
 
     @Override
     public void readValues(String name) {
@@ -75,11 +82,6 @@ public class InputFileAlgXML implements InputFileAlg{
     @Override
     public String taskGeneratorID() { 
         return "TaskGeneratorAlgBasic";
-    }
-
-    @Override
-    public boolean textValues() {//aqui será testado se o arquivo existe
-        return this.arquivo.exists();
     }
     
 }

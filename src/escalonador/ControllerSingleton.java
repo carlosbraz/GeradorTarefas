@@ -110,6 +110,8 @@ public class ControllerSingleton {
             this.nomeOutputFile = user.getOutput();
             this.nomeTaskGenerator = user.getTaskGenerator();
             iniciarGerador();
+        }else{
+            //Exibir mensagem de erro!!
         }
     }
 }
