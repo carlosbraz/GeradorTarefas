@@ -42,6 +42,11 @@ public class ControllerSingleton {
         private static final ControllerSingleton INSTANCE = new ControllerSingleton();
     }
 
+    /**
+     * Metodo que inicia a aplicação e chama todos os outros metodos em suas classes 
+     * na ordem certa para a aplicação funcionar corretamente
+     * @throws java.io.IOException
+     */
     public void iniciarGerador() throws IOException {
         InputFileAlg inp = ativarInput();
         ParamTaskGeneratorAlg param = ativarParamTask();
@@ -59,6 +64,8 @@ public class ControllerSingleton {
         output.setListOutput(tSet.getTaskAlgs());
         output.gerarOutputXML();
         output.escreverArquivo(this.nomeOutputFile);
+        output.alteraLinha("&lt;", "<");
+        output.alteraLinha("&gt;", ">");
     }
 
     public InputFileAlg ativarInput() {
