@@ -9,9 +9,8 @@ package escalonador;
 
 /**
  * Classe de constantes para identificar os Task Generator
- * cada um recebe um valor unico para ser utilizado no codigo
- * 
- * @author T
+ * cada um recebe um valor unico para ser utilizado no codigo 
+ * @author Carlos Ramon
  */
 public class Constants {
     public static final int taskGeneratorAlgBasic = 1;

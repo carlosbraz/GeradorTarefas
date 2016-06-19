@@ -8,17 +8,22 @@ package TaskGenerator;
 import escalonador.Constants;
 
 /**
- *
- * @author T
+ * classe utiliza o padrao de projeto Simple Factory para determinar qual
+ * classe que implementa a interface TaskAlg que deve ser instanciada
+ * @author Carlos Ramon
  */
 public class SimpleTaskGeneratorFactory {
-    
-        public TaskGeneratorAlg createParamTaskGenerator(int paramTaskGeneratorName){
+    /**
+     * Metodo para instanciar o tipo correto de TaskAlg 
+     * de acordo com o TaskGenerator informado
+     * @param paramTaskGeneratorName
+     * @return instancia da classe TaskAlg
+     */
+    public TaskGeneratorAlg createParamTaskGenerator(int paramTaskGeneratorName) {
         TaskGeneratorAlg task = null;
-        if(paramTaskGeneratorName == Constants.taskGeneratorAlgBasic){
+        if (paramTaskGeneratorName == Constants.taskGeneratorAlgBasic) {
             task = new TaskGeneratorAlgBasic();
         }
         return task;
     }
-    
 }

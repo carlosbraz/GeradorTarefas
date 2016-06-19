@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Classe que armazena todos os Task que forem criados na aplicação
  * independente do tipo do Task
- * @author T
+ * @author Carlos Ramon
  */
 public class TaskSet {
     private ArrayList<ArrayList<TaskAlg>> taskAlgs = new ArrayList();

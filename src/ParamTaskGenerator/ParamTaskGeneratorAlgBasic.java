@@ -11,15 +11,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
- * @author T
+ * Classe que contém todos os parametros retirados do arquivo de entrada
+ * do tipo AlgBasic
+ * @author Carlos Ramon
  */
-public class ParamTaskGeneratorAlgBasic implements ParamTaskGeneratorAlg{
-    
-    private String maxAmountTask;  //quantidade maxima de Task em cada TaskSet
+public class ParamTaskGeneratorAlgBasic implements ParamTaskGeneratorAlg{    
+    private String maxAmountTask;
     private String minAmountTask;
-    private String amount;         //quantidade de TaskSet
-    private String utilMax;  
+    private String amount;
+    private String utilMax;
     private String utilMin;
     
     @Override

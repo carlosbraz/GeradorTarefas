@@ -17,26 +17,23 @@ import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 
 /**
- *
- * @author T
+ * Classe que lê e retira os elementos do arquivo xml de entrada
+ * e insere no Map
+ * @author Carlos Ramon
  */
 public class InputFileAlgXML implements InputFileAlg{
-    
     //elemento que quarda os valores de input antes de serem normalizados
-    private Element elemento; 
-    
+    private Element elemento;
     // Campos do arquivo XML, cada um tem valor especifico para o gerador de tarefas
     private Element task;
     private Element taskSet;
     private Element utilization;
-    
     //Strings com os valores de input do arquivo XML normalizados
     private String maxAmountTask;
     private String minAmountTask;
     private String amount;
     private String utilMax;
     private String utilMin;
-    
     //arquivo XML com os inputs pro gerador iniciar
     private File arquivo; 
 

@@ -21,13 +21,12 @@ import java.io.IOException;
 
 /**
  * Classe controller que gerência toda a aplicação
- *
- * @author T
+ * @author Carlos Ramon
  */
 public class ControllerSingleton {
 
-    private String nomeInputFile;  //nome do arquivo com as configurações iniciais
-    private String nomeTaskGenerator;  // nome do TaskGenerator que será utilizado nessa interação
+    private String nomeInputFile;
+    private String nomeTaskGenerator;
     private String nomeOutputFile;
 
     private ControllerSingleton() {
@@ -68,6 +67,10 @@ public class ControllerSingleton {
         output.alteraLinha("&gt;", ">");
     }
 
+    /**
+     * Ativa a Classe InputFile correspondente ao TaskGenerator digitado pelo usuário
+     * @return InputFile
+     */
     public InputFileAlg ativarInput() {
         SimpleInputFileFactory sInput = new SimpleInputFileFactory();
         InputFileAlg inp = sInput.createInputFile(Constants.getTaskGeneratorAlg(this.nomeTaskGenerator));
@@ -75,6 +78,10 @@ public class ControllerSingleton {
         return inp;
     }
 
+    /**
+     * Ativa a Classe ParamTaskGenerator correspondente ao TaskGenerator digitado pelo usuário
+     * @return ParamTaskGenerator
+     */
     public ParamTaskGeneratorAlg ativarParamTask() {
         SimpleParamTaskGeneratorFactory simParam = new SimpleParamTaskGeneratorFactory();
         ParamTaskGeneratorAlg param = simParam.createParamTaskGenerator(Constants.getTaskGeneratorAlg(this.nomeTaskGenerator));
@@ -82,6 +89,10 @@ public class ControllerSingleton {
         return param;
     }
 
+    /**
+     * Ativa a Classe TaskGenerator correspondente ao TaskGenerator digitado pelo usuário
+     * @return TaskGeneratorAlg
+     */
     public TaskGeneratorAlg ativarTaskGenerator() {
         SimpleTaskGeneratorFactory sTask = new SimpleTaskGeneratorFactory();
         TaskGeneratorAlg task = sTask.createParamTaskGenerator(Constants.getTaskGeneratorAlg(this.nomeTaskGenerator));
@@ -89,6 +100,10 @@ public class ControllerSingleton {
         return task;
     }
 
+    /**
+     * Ativa a Classe OutputFile correspondente ao TaskGenerator digitado pelo usuário
+     * @return AbstractOutputFile
+     */
     public AbstractOutputFile ativarOutputFile() {
         SimpleOutputFileFactory sOutput = new SimpleOutputFileFactory();
         AbstractOutputFile out = sOutput.createParamTaskGenerator(Constants.getTaskGeneratorAlg(this.nomeTaskGenerator));
@@ -96,6 +111,12 @@ public class ControllerSingleton {
         return out;
     }
 
+    /**
+     * Testa se os parametros digitados pelo usuario são válidos
+     * @param inputFile
+     * @param taskGenerator
+     * @return TRUE se os parametros são validos ou FALSE se os parametros são invalidos 
+     */
     public boolean testaParametrosIniciais(String inputFile, String taskGenerator) {//testa o arquivo inicial e descobre se ele existe, tambem testa o TaskGenerator
         if (escalonador.Constants.getTaskGeneratorAlg(taskGenerator) <= 0) { 
             return false;
@@ -108,6 +129,12 @@ public class ControllerSingleton {
         }
     }
     
+    
+    /**
+     * Metodo que inicia a interação com o usuário recebendo os parametros iniciais
+     * Utiliza a classe UserInterface para isso e no final chama o metodo iniciarGerador()
+     * @throws IOException 
+     */
     public void iniciarPrograma() throws IOException{
         UserInterface user = new UserInterface();
         
@@ -118,7 +145,8 @@ public class ControllerSingleton {
             this.nomeTaskGenerator = user.getTaskGenerator();
             iniciarGerador();
         }else{
-            //Exibir mensagem de erro!!
+            System.out.println("Erro! Arquivo de entrada ou TaskGenerator invalido");
+            iniciarPrograma();
         }
     }
 }

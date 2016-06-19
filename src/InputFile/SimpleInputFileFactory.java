@@ -9,18 +9,16 @@ import escalonador.Constants;
 
 /**
  * classe utiliza o padrao de projeto Simple Factory para determinar qual
- * classe que implementa a interface InputFile que deve ser instanciada
- * 
- * @author T
+ * classe que implementa a interface InputFileAlg que deve ser instanciada
+ * @author Carlos Ramon
  */
 public class SimpleInputFileFactory {
 
     /**
-     * Metodo para instanciar o tipo correto de Input File 
-     * de acordo com o nome que é recebido como entrada
-     * 
+     * Metodo para instanciar o tipo correto de InputFile 
+     * de acordo com o TaskGenerator informado
      * @param inputFileName nome do Input file que deve ser instanciado
-     * @return instancia da classe InputFile, que vai depender do parametro de entrada 
+     * @return instancia da classe InputFileAlg
      */
     public InputFileAlg createInputFile(int inputFileName) {
         InputFileAlg input = null;

@@ -8,8 +8,7 @@ package ParamTaskGenerator;
 import java.util.Map;
 
 /**
- *
- * @author T
+ * @author Carlos Ramon
  */
 public interface ParamTaskGeneratorAlg {
     

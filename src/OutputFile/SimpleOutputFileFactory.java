@@ -8,13 +8,21 @@ package OutputFile;
 import escalonador.Constants;
 
 /**
- *
- * @author T
+ * classe utiliza o padrao de projeto Simple Factory para determinar qual classe
+ * que implementa a interface OutputFileAlg que deve ser instanciada
+ * @author Carlos Ramon
  */
 public class SimpleOutputFileFactory {
-     public AbstractOutputFile createParamTaskGenerator(int outputFileType){
+
+    /**
+     * Metodo para instanciar o tipo correto de OutputFile
+     * de acordo com o TaskGenerator informado
+     * @param outputFileName
+     * @return instancia da classe OutputFileAlg
+     */
+    public AbstractOutputFile createParamTaskGenerator(int outputFileName) {
         AbstractOutputFile out = null;
-        if(outputFileType == Constants.taskGeneratorAlgBasic){
+        if (outputFileName == Constants.taskGeneratorAlgBasic) {
             out = new OutputFileAlgXML();
         }
         return out;

@@ -26,24 +26,26 @@ import org.jdom.Element;
 import org.jdom.output.XMLOutputter;
 
 /**
- *
- * @author T
+ * Classe Abstract que efetua a criação do xml
+ * que poderá ser utilizado para gerar outros arquivos
+ * @author Carlos Ramon
  */
 public abstract class AbstractOutputFile {
-
     //Array com todos os List de TaskAlg 
     private ArrayList<ArrayList<TaskAlg>> listOutput = null;
-
     //Atributo aonde sera gravado todos os Task para criar o arquivo final 
     private Document outputXML = new Document();
-
     //Elemento raiz do arquivo XML final
     private Element auxOutputXML = new Element("OutputFile");
-
     //Atributo da biblioteca XStream que sera utilizado para manipular XML
     private XStream stream = new XStream(new DomDriver());
     private Element aux;
 
+    /**
+     * Metodo que cria o Element com todos os Task 
+     * que será inserido no arquivo xml
+     * @throws IOException 
+     */
     public void gerarOutputXML() throws IOException {
         int i = 1;
         this.stream.alias("Task", TaskAlgBasic.class);
@@ -67,6 +69,9 @@ public abstract class AbstractOutputFile {
     /**
     * Metodo que concerta uma erro da biblioteca de XML
     * altera simbolos expecificos uma linha por vez
+    * @param palavraAntiga palavra que será substituida
+    * @param palavraNova palavra que será inserida
+    * @throws java.io.IOException
     */
     public void alteraLinha(String palavraAntiga, String palavraNova) throws IOException {
         String arquivo = "OutputFile.xml";
@@ -103,37 +108,8 @@ public abstract class AbstractOutputFile {
         System.out.println(" Este é o document gerado" + this.outputXML);
     }
 
-    public void escreverArquivo(String nome) {
-        //System.out.println(" Nao era pra entrar aqui!! "); 
+    public void escreverArquivo(String nome) { 
     }
 
-    /**
-     *Esse metodo deve colocar todos os list em elements
-     * 
-     * @param array
-     */
-    public void outputFileXMLAlgBasic(ArrayList<TaskAlgBasic> array) {  
-        Element taskSet = new Element("TaskSet");                          // enviara um element que recebera um ID do lado de fora 
-        Element aux;
-        Element task;
-        for (Iterator<TaskAlgBasic> iterator = array.iterator(); iterator.hasNext();) {
-            TaskAlgBasic next = iterator.next();
-
-            task = new Element("task");
-            aux = new Element("ID");
-            aux.setText(Integer.toString(next.getId()));
-            task.addContent(aux);
-
-            aux = new Element("period");
-            aux.setText("000");
-            task.addContent(aux);
-
-            aux = new Element("WCET");
-            aux.setText("000");
-            task.addContent(aux);
-
-            taskSet.addContent(task);
-            //aux.addContent();
-        }
-    }
+    
 }

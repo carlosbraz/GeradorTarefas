@@ -6,8 +6,8 @@
 package TaskGenerator;
 
 /**
- *
- * @author T
+ * Classe que determina o tipo do TaskAlgBasic
+ * @author Carlos Ramon
  */
 public class TaskAlgBasic implements TaskAlg{
 

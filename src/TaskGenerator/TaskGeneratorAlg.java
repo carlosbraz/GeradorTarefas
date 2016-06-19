@@ -8,8 +8,7 @@ package TaskGenerator;
 import ParamTaskGenerator.ParamTaskGeneratorAlgBasic;
 
 /**
- *
- * @author T
+ * @author Carlos Ramon
  */
 public interface TaskGeneratorAlg {
     

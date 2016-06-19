@@ -11,11 +11,15 @@ import java.io.IOException;
 import org.jdom.output.XMLOutputter;
 
 /**
- *
- * @author T
+ * Classe que grava o arquivo xml
+ * @author Carlos Ramon
  */
 public class OutputFileAlgXML extends AbstractOutputFile{
-    
+    /**
+     * Metodo que cria um arquivo xml utilizando o nome informado pelo usuario
+     * e o Element criado na execução
+     * @param nome nome do arquivo xml que será gravado 
+     */
     @Override
     public void escreverArquivo(String nome){
         XMLOutputter xout = new XMLOutputter();    //Classe responsável para imprimir / gerar o XML

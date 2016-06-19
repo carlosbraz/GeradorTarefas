@@ -15,8 +15,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- *
- * @author T
+ * @author Carlos Ramon
  */
 public class Escalonador {
 

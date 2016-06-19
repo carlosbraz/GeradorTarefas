@@ -8,11 +8,17 @@ package ParamTaskGenerator;
 import escalonador.Constants;
 
 /**
- *
- * @author T
+ * classe utiliza o padrao de projeto Simple Factory para determinar qual classe
+ * que implementa a interface ParamTaskGeneratorAlg que deve ser instanciada
+ * @author Carlos Ramon
  */
 public class SimpleParamTaskGeneratorFactory {
-    
+    /**
+     * Metodo para instanciar o tipo correto de ParamTaskGeneratorAlg
+     * de acordo com o TaskGenerator informado
+     * @param paramTaskGeneratorName
+     * @return instancia da classe ParamTaskGeneratorAlg
+     */
     public ParamTaskGeneratorAlg createParamTaskGenerator(int paramTaskGeneratorName){
         ParamTaskGeneratorAlg param = null;
         if(paramTaskGeneratorName == Constants.taskGeneratorAlgBasic){

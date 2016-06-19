@@ -6,11 +6,9 @@
 package TaskGenerator;
 
 /**
- *
- * @author T
+ * @author Carlos Ramon
  */
-public interface TaskAlg {
-    
+public interface TaskAlg { 
     /**
      * @return 
      * retorna o atributo id de qualquer task que implemente esta interface 

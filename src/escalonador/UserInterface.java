@@ -8,8 +8,8 @@ package escalonador;
 import java.util.Scanner;
 
 /**
- *
- * @author T
+ * Classe que gerencia a interação com o usuário
+ * @author Carlos Ramon
  */
 public class UserInterface {
     private String input = "InputFile.xml";

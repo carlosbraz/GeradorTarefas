@@ -10,11 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author T
+ * Classe que cria todos os Task's e TaskSet's 
+ * @author Carlos Ramon
  */
 public class TaskGeneratorAlgBasic implements TaskGeneratorAlg{
-
     private ParamTaskGeneratorAlgBasic paramTask = null;
     private ArrayList<TaskAlg> tasks;
     private TaskAlgBasic task;
